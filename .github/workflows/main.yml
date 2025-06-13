@@ -8,7 +8,7 @@ on:
 jobs:
   build-deploy:
     name: Build and Deploy Spring boot for beginner
-    runs-on: ubuntu-latest, macos-latest, windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -47,5 +47,3 @@ jobs:
           dockerfile: Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/spring-boot-for-beginners:today
-
-          
